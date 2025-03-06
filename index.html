@@ -54,25 +54,16 @@ header {
     gap: 10px;
 }
 
-.logo-circle {
+.logo-image {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid white;
-    overflow: hidden;
-    position: relative;
+    object-fit: contain;
 }
 
-.logo-inner-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #0a0a0a;
+.logo-text {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
 }
 
 .nav-links {
@@ -789,17 +780,15 @@ input:checked + .slider:before {
     <header>
         <div class="header-container">
             <div class="logo">
-                <div class="logo-circle">
-                    <div class="logo-inner-circle"></div>
-                </div>
+                <img src="https://iili.io/3FO8EQt.png" alt="Daily Drink Logo" class="logo-image">
             </div>
             <div class="nav-links">
                 <a href="#" class="active">Home</a>
-                <a href="#" class="active">Rankup</a>
-                <a href="#video-section" class="active">Tutorial</a>
-                <a href="#footer-container" class="active">Contact</a>
+                <a href="#">Rankup</a>
+                <a href="#video-section">Tutorial</a>
+                <a href="#footer-container">Contact</a>
             </div>
-            <a href="#" class="get-started-btn" >Get Started</a>
+            <a href="#" class="get-started-btn">Get Started</a>
             <button class="mobile-menu-toggle" id="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -1110,9 +1099,7 @@ input:checked + .slider:before {
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="logo" style="justify-content: center; margin-bottom: 20px;">
-                <div class="logo-circle">
-                    <div class="logo-inner-circle"></div>
-                </div>
+                <img src="https://iili.io/3FO8EQt.png" alt="Daily Drink Logo" class="logo-image">
                 <div class="logo-text">Daily Drink</div>
             </div>
             <form class="login-form">
@@ -1144,9 +1131,7 @@ input:checked + .slider:before {
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="logo" style="justify-content: center; margin-bottom: 20px;">
-                <div class="logo-circle">
-                    <div class="logo-inner-circle"></div>
-                </div>
+                <img src="https://iili.io/3FO8EQt.png" alt="Daily Drink Logo" class="logo-image">
                 <div class="logo-text">Daily Drink</div>
             </div>
             <form class="login-form">
@@ -1294,7 +1279,7 @@ input:checked + .slider:before {
             const currentDrink = document.querySelector('.drink-circle h3').textContent;
             const [current, total] = currentDrink.split('/');
             const newCurrent = parseFloat(current) + 0.5;
-            document.querySelector('.drink-circle h3').textContent = newCurrent + total;
+            document.querySelector('.drink-circle h3').textContent = newCurrent + '/' + total;
         });
 
         // Initialize mobile menu as hidden
@@ -1314,3 +1299,4 @@ input:checked + .slider:before {
     </script>
 </body>
 </html>
+
